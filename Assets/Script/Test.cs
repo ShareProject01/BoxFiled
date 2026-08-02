@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Test : MonoBehaviour
 {
+    [SerializeField]
+    private GameObject player;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -17,5 +19,6 @@ public class Test : MonoBehaviour
     public void EventJumpAction()
     {
         Print.Log("[Asahi Test] Jump 19");
+        player.transform.Rotate(Vector3.forward * 15);
     }
 }
