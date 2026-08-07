@@ -61,8 +61,8 @@ public class PlayerController : MonoBehaviour
         if (Gamepad.current != null)
         {
             Vector2 stickInput = Gamepad.current.leftStick.ReadValue();
-            // kbRoll = stickInput.x;   // 左右でロール
-            kbYaw = stickInput.x;   // 左右でヨー(共通化することで操作が簡易になる)
+            kbRoll = stickInput.x;   // 左右でロール
+            // kbYaw = stickInput.x;   // 左右でヨー(共通化することで操作が簡易になる)
             kbPitch = stickInput.y;  // 上下でピッチ
         }
 
