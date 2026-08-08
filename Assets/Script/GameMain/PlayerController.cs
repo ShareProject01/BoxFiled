@@ -64,6 +64,9 @@ public class PlayerController : MonoBehaviour
             kbRoll = stickInput.x;   // 左右でロール
             // kbYaw = stickInput.x;   // 左右でヨー(共通化することで操作が簡易になる)
             kbPitch = stickInput.y;  // 上下でピッチ
+
+            if (Gamepad.current.aButton.isPressed) { kbThrottle = 1f; }
+            else { kbThrottle -= 2f; }
         }
 
         // --- 2. キーボードとUI入力の合算 ---
